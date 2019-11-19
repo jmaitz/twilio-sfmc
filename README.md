@@ -67,7 +67,6 @@ The index.html defines how the Marketer will see/interact with the Twilio Messag
 - Auth Token
 - Messaging Service SID
 - Message body
-- Media URL
 
 If you want, the Account SID, auth token even the Messaging Service SID can be hidden or saved as config variables so that your marketer doesn’t need to include them every time they configure a message through Journey Builder
 
