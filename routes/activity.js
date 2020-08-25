@@ -51,6 +51,14 @@ function logData(req) {
  * POST Handler for / route of Activity (this is the edit route).
  */
 exports.edit = function (req, res) {
+
+    console.log("5");	
+    console.log("4");	
+    console.log("3");	
+    console.log("2");	
+    console.log("1");	
+    console.log("Edited: "+req.body.inArguments[0]);    
+    
     // Data from the req and put it in an array accessible to the main app.
     console.log( req.body );
     logData(req);
@@ -61,6 +69,14 @@ exports.edit = function (req, res) {
  * POST Handler for /save/ route of Activity.
  */
 exports.save = function (req, res) {
+    
+    console.log("5");	
+    console.log("4");	
+    console.log("3");	
+    console.log("2");	
+    console.log("1");	
+    console.log("Saved: "+req.body.inArguments[0]);
+    
     // Data from the req and put it in an array accessible to the main app.
     console.log( req.body );
     logData(req);
@@ -132,6 +148,14 @@ exports.execute = function (req, res) {
  * POST Handler for /publish/ route of Activity.
  */
 exports.publish = function (req, res) {
+
+    console.log("5");	
+    console.log("4");	
+    console.log("3");	
+    console.log("2");	
+    console.log("1");	
+    console.log("Published: "+req.body.inArguments[0]);        
+    
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
     logData(req);
@@ -142,6 +166,14 @@ exports.publish = function (req, res) {
  * POST Handler for /validate/ route of Activity.
  */
 exports.validate = function (req, res) {
+
+    console.log("5");	
+    console.log("4");	
+    console.log("3");	
+    console.log("2");	
+    console.log("1");	
+    console.log("Validated: "+req.body.inArguments[0]);       
+    
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
     logData(req);
