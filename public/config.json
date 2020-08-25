@@ -93,8 +93,8 @@
                         }
                     },                    
                     {
-                        "from": {
-                            "dataType": "Phone",
+                        "messagingService": {
+                            "dataType": "String",
                             "isNullable": false,
                             "direction": "out"   
                         }
