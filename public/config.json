@@ -21,7 +21,7 @@
                 }               
             ],
             "outArguments": [],
-            "url": "https://twilio-sfmc.herokuapp.com/execute",
+            "url": "https://twilio-sfmc.herokuapp.com/journeybuilder/execute",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -93,9 +93,9 @@
                         }
                     },                    
                     {
-                        "messagingService": {
-                            "dataType": "String",
-                            "isNullable": false,
+                        "from": {
+                            "dataType": "Phone",
+                            "isNullable": true,
                             "direction": "out"   
                         }
                     },                    
