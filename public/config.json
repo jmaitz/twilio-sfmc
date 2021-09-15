@@ -21,7 +21,7 @@
                 }               
             ],
             "outArguments": [],
-            "url": "https://evening-harbor-75280.herokuapp.com/journeybuilder/execute",
+            "url": "https://evening-harbor-75280.herokuapp.com/journeybuilder/execute/",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -32,35 +32,35 @@
     "configurationArguments": {
       "applicationExtensionKey": "d281d8ad-e5ed-4c59-9cca-df9e3602e8e4",
        "save": {
-           "url": "https://evening-harbor-75280.herokuapp.com/save",
+           "url": "https://evening-harbor-75280.herokuapp.com/save/",
             "verb": "POST",
             "body": "",
             "format": "json",
-            "useJwt": false,
+            "useJwt": true,
             "timeout": 2000
        },
        "publish": {
-           "url": "https://evening-harbor-75280.herokuapp.com/publish",
+           "url": "https://evening-harbor-75280.herokuapp.com/publish/",
             "verb": "POST",
             "body": "",
             "format": "json",
-            "useJwt": false,
+            "useJwt": true,
             "timeout": 2000
        },
        "validate": {
-           "url": "https://evening-harbor-75280.herokuapp.com/validate",
+           "url": "https://evening-harbor-75280.herokuapp.com/validate/",
             "verb": "POST",
             "body": "",
             "format": "json",
-            "useJwt": false,
+            "useJwt": true,
             "timeout": 2000
        },
        "stop": {
-           "url": "https://evening-harbor-75280.herokuapp.com/stop",
+           "url": "https://evening-harbor-75280.herokuapp.com/stop/",
             "verb": "POST",
             "body": "",
             "format": "json",
-            "useJwt": false,
+            "useJwt": true,
             "timeout": 2000
        }
     },
