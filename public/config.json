@@ -21,7 +21,7 @@
                 }               
             ],
             "outArguments": [],
-            "url": "https://evening-harbor-75280.herokuapp.com/journeybuilder/execute/",
+            "url": "https://evening-harbor-75280.herokuapp.com/execute/",
             "verb": "POST",
             "body": "",
             "format": "json",
