@@ -12,19 +12,18 @@ var activity    = require('./routes/activity');
 
 //var app = express();
 
-const app = express();
+//const app = express();
 
 // Configure Express
 app.set('port', process.env.PORT || 3000);
 //app.use(bodyParser.json()); 
 //app.use(bodyParser.json({type: 'application/json'})); 
-//app.use(bodyParser.urlencoded({ extended: true }));
 //app.use(express.urlencoded());
 //app.use(express.methodOverride());
 //app.use(express.favicon());
 
-app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '/public')));
 
