@@ -2,7 +2,7 @@
 // Module Dependencies
 // -------------------
 var express     = require('express');
-//var bodyParser  = require('body-parser');
+var bodyParser  = require('body-parser');
 var errorhandler = require('errorhandler');
 var http        = require('http');
 var path        = require('path');
@@ -16,8 +16,8 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 //app.use(bodyParser.json()); 
 //app.use(bodyParser.json({type: 'application/json'})); 
-//app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.urlencoded());
+app.use(bodyParser.urlencoded({ extended: true }));
+//app.use(express.urlencoded());
 //app.use(express.methodOverride());
 //app.use(express.favicon());
 
