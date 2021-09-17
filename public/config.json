@@ -34,7 +34,7 @@
        "save": {
            "url": "https://evening-harbor-75280.herokuapp.com/save/",
             "verb": "POST",
-            "body": "HellooooooooSave",
+            "body": "",
             "format": "json",
             "useJwt": true,
             "timeout": 2000
@@ -108,7 +108,7 @@
                     },
                     {
                         "body": {
-                            "dataType": "String",
+                            "dataType": "json",
                             "isNullable": false,
                             "direction": "out"   
                         }
