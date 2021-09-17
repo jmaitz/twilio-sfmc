@@ -10,7 +10,7 @@ var request     = require('request');
 var routes      = require('./routes');
 var activity    = require('./routes/activity');
 
-//var app = express();
+var app = express();
 
 //const app = express();
 
