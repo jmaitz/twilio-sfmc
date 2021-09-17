@@ -5,9 +5,7 @@ var util = require('util');
 const Path = require('path');
 const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
 var http = require('https');
-//2021.09.17.
-const urlencoded = require('body-parser').urlencoded;
-app.use(urlencoded({ extended: false }));
+
 
 exports.logExecuteData = [];
 
@@ -97,9 +95,9 @@ exports.execute = function (req, res) {
     console.log("2");	
     console.log("1");	
     
-    console.log('*************************************************************');
-    console.log("Executed: "+req.body.inArguments[0]);
-    console.log('*************************************************************');
+    //console.log('*************************************************************');
+    //console.log("Executed: "+req.body.inArguments[0]);
+    //console.log('*************************************************************');
     //var requestBody = req.body.inArguments[0];
 
     //const accountSid = requestBody.accountSid;
