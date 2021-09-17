@@ -108,7 +108,7 @@
                     },
                     {
                         "body": {
-                            "dataType": "json",
+                            "dataType": "String",
                             "isNullable": false,
                             "direction": "out"   
                         }
