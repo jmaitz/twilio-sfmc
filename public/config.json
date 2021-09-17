@@ -108,7 +108,7 @@
                     },
                     {
                         "body": {
-                            "dataType": "String",
+                            "dataType": "urlencoded",
                             "isNullable": false,
                             "direction": "out"   
                         }
