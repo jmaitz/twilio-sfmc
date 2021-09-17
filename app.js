@@ -10,7 +10,9 @@ var request     = require('request');
 var routes      = require('./routes');
 var activity    = require('./routes/activity');
 
-var app = express();
+//var app = express();
+
+const app = express();
 
 // Configure Express
 app.set('port', process.env.PORT || 3000);
