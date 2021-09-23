@@ -6,6 +6,7 @@ const Path = require('path');
 const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
 var http = require('https');
 
+
 exports.logExecuteData = [];
 
 function logData(req) {
@@ -81,6 +82,7 @@ exports.save = function (req, res) {
     console.log( req.body );
     logData(req);
     res.send(200, 'Save');
+    //res.status(status).send(body);
 };
 
 /*
@@ -93,15 +95,20 @@ exports.execute = function (req, res) {
     console.log("3");	
     console.log("2");	
     console.log("1");	
-    //console.log("Executed: "+req.body.inArguments[0]);
     
+    console.log('*************************************************************');
+    //console.log("Executed: "+req.body.inArguments[0]);
+    console.log('*************************************************************');
     var requestBody = req.body.inArguments[0];
 
-    const accountSid = requestBody.accountSid;
-    const authToken = requestBody.authToken;
+    //const accountSid = requestBody.accountSid;
+    //const authToken = requestBody.authToken;
     const to = requestBody.to;
     const from = requestBody.messagingService;
     const body = requestBody.body;;
+    const accountSid = 'AC11d75b32da101ded4b9907b5dc678701';
+    const authToken = '51464cc351bd6d37401ac6e6e1eed7d5';
+    
 
     const client = require('twilio')(accountSid, authToken); 
      
@@ -121,26 +128,26 @@ exports.execute = function (req, res) {
     res.send(200, 'Publish');
 
     // Used to decode JWT
-    // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
+    JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 
-    //     // verification error -> unauthorized request
-    //     if (err) {
-    //         console.error(err);
-    //         return res.status(401).end();
-    //     }
+        // verification error -> unauthorized request
+        if (err) {
+            console.error(err);
+            return res.status(401).end();
+        }
 
-    //     if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
+        if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
             
-    //         // decoded in arguments
-    //         var decodedArgs = decoded.inArguments[0];
+            // decoded in arguments
+            var decodedArgs = decoded.inArguments[0];
             
-    //         logData(req);
-    //         res.send(200, 'Execute');
-    //     } else {
-    //         console.error('inArguments invalid.');
-    //         return res.status(400).end();
-    //     }
-    // });
+            logData(req);
+            res.send(200, 'Execute');
+        } else {
+            console.error('inArguments invalid.');
+            return res.status(400).end();
+        }
+    });
 };
 
 
@@ -159,7 +166,7 @@ exports.publish = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
 //     logData(req);
-//     res.send(200, 'Publish');
+     res.send(200, 'Publish');
 };
 
 /*
