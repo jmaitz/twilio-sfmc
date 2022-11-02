@@ -16,8 +16,8 @@
         "execute": {
             "inArguments": [
                 {
-                  "email": "{{Contact.Attribute.APPT_EVENT_TRIGGER.EmailAddress}}",
-                  "to": "{{Contact.Attribute.APPT_EVENT_TRIGGER.RecipientMobile}}" 
+                  "email": "{{Contact.Attribute.appointmentEvents.EmailAddress}}",
+                  "to": "{{Contact.Attribute.appointmentEvents.RecipientMobile}}" 
                 }               
             ],
             "outArguments": [],
