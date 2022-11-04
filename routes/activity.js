@@ -62,7 +62,9 @@ exports.edit = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
     logData(req);
-    res.send(200, 'Edit');
+    return res.status(200).json({
+        success: true,
+    });
 };
 
 /*
@@ -80,7 +82,9 @@ exports.save = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     console.log( req.body );
     logData(req);
-    res.send(200, 'Save');
+    return res.status(200).json({
+        success: true,
+    });
 };
 
 /*
@@ -118,7 +122,9 @@ exports.execute = function (req, res) {
 
     // FOR TESTING
     logData(req);
-    res.send(200, 'Publish');
+    return res.status(200).json({
+        success: true,
+    });
 
     // Used to decode JWT
     // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
@@ -159,7 +165,9 @@ exports.publish = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
      logData(req);
-     res.send(200, 'Publish');
+    return res.status(200).json({
+        success: true,
+    });
 };
 
 /*
