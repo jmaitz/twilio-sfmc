@@ -21,7 +21,7 @@
                 }               
             ],
             "outArguments": [],
-            "url": "https://zeel-twilio-mc-test.herokuapp.com/journeybuilder/execute",
+            "url": "https://zeel-twilio-mc-test.herokuapp.com/execute",
             "verb": "POST",
             "body": "",
             "format": "json",
