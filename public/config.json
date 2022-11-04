@@ -21,7 +21,7 @@
                 }               
             ],
             "outArguments": [],
-            "url": "https://zeel-twilio-mc-test.herokuapp.com/journeybuilder/execute",
+            "url": "https://54.174.193.17/journeybuilder/execute",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -32,7 +32,7 @@
     "configurationArguments": {
       "applicationExtensionKey": "cb32ab43-5269-4f82-9938-230320917839",
        "save": {
-           "url": "https://zeel-twilio-mc-test.herokuapp.com/save",
+           "url": "https://54.174.193.17/save",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -40,7 +40,7 @@
             "timeout": 2000
        },
        "publish": {
-           "url": "https://zeel-twilio-mc-test.herokuapp.com/publish",
+           "url": "https://54.174.193.17/publish",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -48,7 +48,7 @@
             "timeout": 2000
        },
        "validate": {
-           "url": "https://zeel-twilio-mc-test.herokuapp.com/validate",
+           "url": "https://54.174.193.17/validate",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -56,7 +56,7 @@
             "timeout": 2000
        },
        "stop": {
-           "url": "https://zeel-twilio-mc-test.herokuapp.com/stop",
+           "url": "https://54.174.193.17/stop",
             "verb": "POST",
             "body": "",
             "format": "json",
