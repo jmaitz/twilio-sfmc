@@ -35,7 +35,7 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "ab66cbf3-8591-4f98-8fe5-e66076e6a4b3",
+      "applicationExtensionKey": "0347145a-5d6d-4803-9e87-e65751d8a1b4",
        "save": {
            "url": "https://zeel-twilio-mc-test.herokuapp.com/save",
             "verb": "POST",
