@@ -52,11 +52,8 @@ function logData(req) {
  */
 exports.edit = function (req, res) {
 
-    console.log("5 -- For Edit");	
-    console.log("4");	
-    console.log("3");	
-    console.log("2");	
-    console.log("1");	
+    console.log("begin edit");
+
     //console.log("Edited: "+req.body.inArguments[0]);    
     
     // Data from the req and put it in an array accessible to the main app.
@@ -72,11 +69,8 @@ exports.edit = function (req, res) {
  */
 exports.save = function (req, res) {
     
-    console.log("5 -- For Save");	
-    console.log("4");	
-    console.log("3");	
-    console.log("2");	
-    console.log("1");	
+    console.log("begin save");
+
     //console.log("Saved: "+req.body.inArguments[0]);
     
     // Data from the req and put it in an array accessible to the main app.
@@ -92,18 +86,13 @@ exports.save = function (req, res) {
  */
 exports.execute = function (req, res) {
 
-    console.log("5 -- For Execute");	
-    console.log("4");	
-    console.log("3");	
-    console.log("2");	
-    console.log("1");	
-    //console.log("Executed: "+req.body.inArguments[0]);
+    console.log("Executed: "+req.body.inArguments[0]);
     
     var requestBody = req.body.inArguments[0];
 
     const accountSid = requestBody.accountSid;
     const authToken = requestBody.authToken;
-    const to = requestBody.to;
+    const to = "+15033299390"; //requestBody.to;
     const messagingService = requestBody.messagingService;
     const body = requestBody.body;
 
@@ -155,11 +144,8 @@ exports.execute = function (req, res) {
  */
 exports.publish = function (req, res) {
 
-    console.log("5 -- For Publish");	
-    console.log("4");	
-    console.log("3");	
-    console.log("2");	
-    console.log("1");	
+    console.log("Begin publish");
+
     //console.log("Published: "+req.body.inArguments[0]);        
     
     // Data from the req and put it in an array accessible to the main app.
@@ -175,12 +161,9 @@ exports.publish = function (req, res) {
  */
 exports.validate = function (req, res) {
 
-    console.log("5 -- For Validate");	
-    console.log("4");	
-    console.log("3");	
-    console.log("2");	
-    console.log("1");	
-    //console.log("Validated: "+req.body.inArguments[0]);       
+    console.log("Begin validate");
+
+    console.log("Validated: "+req.body.inArguments[0]);
     
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
