@@ -19,7 +19,9 @@
                   "email": "{{Contact.Attribute.appointmentEvents.EmailAddress}}",
                   "to": "{{Contact.Attribute.OG_Event_appt_state_changed.recipient_mobile}}",
                   "toAttempt2": "{{Interaction.APIEvent-47d939ea-ab6e-910c-45f2-bca3af5789c2.recipient_mobile}}",
-                  "toAttempt3": "{{Interaction.OG_Event_appt_state_changed.recipient_mobile}}"
+                  "toAttempt3": "{{Interaction.OG_Event_appt_state_changed.recipient_mobile}}",
+                  "toAttempt4": "{{InteractionDefaults.recipient_mobile}}",
+                  "toAttempt5": "{{InteractionDefaults.recipient_mobile}}"
                 }               
             ],
             "outArguments": [],
