@@ -100,7 +100,8 @@ define([
             "authToken": authToken,
             "messagingService": messagingService,
             "body": body,
-            "to": "{{Contact.Attribute.appointmentEvents.recipientMobile}}" //<----This should map to your data extension name and phone number column
+            "to": "{{InteractionDefaults.recipient_mobile}}", //<----This should map to your data extension name and phone number column
+            "hello":"world"
         }];
 
         payload['metaData'].isConfigured = true;
