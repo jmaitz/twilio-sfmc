@@ -164,8 +164,8 @@ exports.validate = function (req, res) {
 
     console.log("Begin validate");
 
-    console.log("Validated: "+req.body.inArguments[0]);
-    
+    console.log("Validation request body:" );
+    console.log(req.body)
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
     logData(req);
