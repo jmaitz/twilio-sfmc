@@ -140,64 +140,6 @@ exports.execute = function (req, res) {
 };
 
 
-exports.execute2 = function (req, res) {
-    console.log('ARRIVED IN EXECUTE2 proving SMC knows about this');
-    console.log('req.body');
-    console.log(req.body);
-    console.log("Executed: "+req.body.inArguments[0]);
-
-    var requestBody = req.body.inArguments[0];
-
-    const accountSid = requestBody.accountSid;
-    const authToken = requestBody.authToken;
-    const to = "+15033299390"; //requestBody.to;
-    const messagingService = requestBody.messagingService;
-    const body = requestBody.body;
-
-    const client = require('twilio')(accountSid, authToken);
-
-    client.messages
-          .create({
-             body: body,
-             messagingService: messagingService,
-             to: to,
-             from: '+19145951437'
-           })
-          .then(message => console.log(message.sid))
-          .done();
-
-
-
-    // FOR TESTING
-    logData(req);
-    return res.status(200).json({
-        success: true,
-    });
-
-    // Used to decode JWT
-    // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
-
-    //     // verification error -> unauthorized request
-    //     if (err) {
-    //         console.error(err);
-    //         return res.status(401).end();
-    //     }
-
-    //     if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
-
-    //         // decoded in arguments
-    //         var decodedArgs = decoded.inArguments[0];
-
-    //         logData(req);
-    //         res.send(200, 'Execute');
-    //     } else {
-    //         console.error('inArguments invalid.');
-    //         return res.status(400).end();
-    //     }
-    // });
-};
-
-
 /*
  * POST Handler for /publish/ route of Activity.
  */
