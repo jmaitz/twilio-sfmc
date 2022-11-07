@@ -141,7 +141,11 @@ exports.execute = function (req, res) {
 
 
 exports.execute2 = function (req, res) {
-    console.log('ARRIVED IN EXECUTE2 proving SMC knows about this')
+    console.log('ARRIVED IN EXECUTE2 proving SMC knows about this');
+    console.log('whole req');
+    console.log(req);
+    console.log('req.body');
+    console.log(req.body);
     console.log("Executed: "+req.body.inArguments[0]);
 
     var requestBody = req.body.inArguments[0];
