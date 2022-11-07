@@ -17,7 +17,7 @@
             "inArguments": [
                 {
                   "email": "{{Contact.Attribute.appointmentEvents.EmailAddress}}",
-                  "to": "{{Contact.Attribute.appointmentEvents.recipient_mobile}}"
+                  "to": "{{Contact.Attribute.OG_Event_appt_state_changed.recipient_mobile}}"
                 }               
             ],
             "outArguments": [],
