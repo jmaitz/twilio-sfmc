@@ -100,8 +100,7 @@ define([
             "authToken": authToken,
             "messagingService": messagingService,
             "body": body,
-            "to": "{{InteractionDefaults.recipient_mobile}}", //<----This should map to your data extension name and phone number column
-            "hello":"world"
+            "to": "{{InteractionDefaults.recipient_mobile}}"
         }];
 
         payload['metaData'].isConfigured = true;
