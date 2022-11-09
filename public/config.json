@@ -16,7 +16,7 @@
         "execute": {
             "inArguments": [
               {
-                "email": "{{Contact.Attribute.appointmentEvents.EmailAddress}}"
+                "email": "{{Contact.Attribute.og_appt_state_change.EmailAddress}}"
               }
             ],
             "outArguments": [],
