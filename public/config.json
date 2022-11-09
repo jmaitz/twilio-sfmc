@@ -15,12 +15,6 @@
     "arguments": {
         "execute": {
             "inArguments": [
-              {
-                "email": "{{Contact.Attribute.OG_Event_appt_state_changed.EmailAddress}}"
-              },
-              {
-                "to": "{{InteractionDefaults.recipient_mobile}}"
-              }
             ],
             "outArguments": [],
             "url": "https://zeel-twilio-mc-test.herokuapp.com/journeybuilder/execute",

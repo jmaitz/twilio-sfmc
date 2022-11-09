@@ -89,7 +89,7 @@ define([
     }
 
     function save() {
-
+        console.log("Begin save in custom activity");
         var accountSid = $('#accountSID').val();
         var authToken = $('#authToken').val();
         var messagingService = $('#messagingService').val();
@@ -100,9 +100,9 @@ define([
             "authToken": authToken,
             "messagingService": messagingService,
             "body": body,
-            "to": "{{Contact.Email}}"
-        }];
 
+        }];
+        //"to": "{{Contact.Email}}"
         payload['metaData'].isConfigured = true;
 
         console.log("Payload on SAVE function: "+JSON.stringify(payload));

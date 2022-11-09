@@ -1,0 +1,41 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="28">
+            <item index="0" class="java.lang.String" itemvalue="client-py" />
+            <item index="1" class="java.lang.String" itemvalue="ng-common-flask" />
+            <item index="2" class="java.lang.String" itemvalue="usaddress-scourgify" />
+            <item index="3" class="java.lang.String" itemvalue="ng-swagger" />
+            <item index="4" class="java.lang.String" itemvalue="connexion" />
+            <item index="5" class="java.lang.String" itemvalue="pyhumps" />
+            <item index="6" class="java.lang.String" itemvalue="jsonschema" />
+            <item index="7" class="java.lang.String" itemvalue="ng-common-pdf" />
+            <item index="8" class="java.lang.String" itemvalue="locust" />
+            <item index="9" class="java.lang.String" itemvalue="flask-migrate" />
+            <item index="10" class="java.lang.String" itemvalue="marshmallow-sqlalchemy" />
+            <item index="11" class="java.lang.String" itemvalue="pymongo" />
+            <item index="12" class="java.lang.String" itemvalue="factory-boy" />
+            <item index="13" class="java.lang.String" itemvalue="sqlalchemy-utils" />
+            <item index="14" class="java.lang.String" itemvalue="ng-common" />
+            <item index="15" class="java.lang.String" itemvalue="ng-data" />
+            <item index="16" class="java.lang.String" itemvalue="flask-sqlalchemy" />
+            <item index="17" class="java.lang.String" itemvalue="psycopg2" />
+            <item index="18" class="java.lang.String" itemvalue="python-dotenv" />
+            <item index="19" class="java.lang.String" itemvalue="requests" />
+            <item index="20" class="java.lang.String" itemvalue="deepdiff" />
+            <item index="21" class="java.lang.String" itemvalue="click" />
+            <item index="22" class="java.lang.String" itemvalue="openapi-spec-validator" />
+            <item index="23" class="java.lang.String" itemvalue="ng-model" />
+            <item index="24" class="java.lang.String" itemvalue="pdfplumber" />
+            <item index="25" class="java.lang.String" itemvalue="faker" />
+            <item index="26" class="java.lang.String" itemvalue="nameparser" />
+            <item index="27" class="java.lang.String" itemvalue="flask" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
