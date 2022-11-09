@@ -16,7 +16,10 @@
         "execute": {
             "inArguments": [
               {
-                "email": "{{Contact.Attribute.og_appt_state_change.EmailAddress}}"
+                "email": "{{Contact.Attribute.OG_Event_appt_state_changed.EmailAddress}}"
+              },
+              {
+                "to": "{{InteractionDefaults.recipient_mobile}}"
               }
             ],
             "outArguments": [],
