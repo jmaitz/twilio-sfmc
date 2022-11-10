@@ -100,7 +100,8 @@ define([
             "authToken": authToken,
             "messagingService": messagingService,
             "body": body,
-            "hello":"world"
+            "hello":"world",
+            "contact_key":"{{Contact.Key}}"
         }];
         //"to": "{{Contact.Email}}"
         payload['metaData'].isConfigured = true;
