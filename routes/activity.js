@@ -92,7 +92,7 @@ exports.execute = function (req, res) {
 
     const accountSid = requestBody.accountSid;
     const authToken = requestBody.authToken;
-    const to = "+15033299390"; //requestBody.to;
+    const to = requestBody.recipient_mobile;
     const messagingService = requestBody.messagingService;
     const body = requestBody.body;
 
@@ -104,7 +104,8 @@ exports.execute = function (req, res) {
         "+15676741096",
         "+15033299390",
         "+19177277893",
-        "+15516669363"
+        "+15516669363",
+        "+15033299390"
     ]
 
     if (!('to' in white_list)){
