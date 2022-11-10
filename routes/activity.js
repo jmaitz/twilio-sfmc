@@ -110,7 +110,7 @@ exports.execute = function (req, res) {
     if (!('to' in white_list)){
             console.log("recipient_mobile not in whitelist");
             return res.status(400).json({
-            message:"recipient_mobile not in whitelist"
+            message:"recipient_mobile not in whitelist",
             success: false,
         });
     }
