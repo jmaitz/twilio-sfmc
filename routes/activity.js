@@ -108,7 +108,7 @@ exports.execute = function (req, res) {
         "+15033299390"
     ]
 
-    if (!('to' in white_list)){
+    if (!(to in white_list)){
             console.log("recipient_mobile not in whitelist");
             return res.status(400).json({
             message:"recipient_mobile not in whitelist",
