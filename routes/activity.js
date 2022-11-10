@@ -86,8 +86,8 @@ exports.save = function (req, res) {
  */
 exports.execute = function (req, res) {
     console.log("begin execute");
-    console.log("Executed: "+req.body.inArguments[0]);
-    
+    console.log("inArguments");
+    console.log(req.body.inArguments);
     var requestBody = req.body.inArguments[0];
 
     const accountSid = requestBody.accountSid;
@@ -97,7 +97,24 @@ exports.execute = function (req, res) {
     const body = requestBody.body;
 
     const client = require('twilio')(accountSid, authToken); 
-     
+
+    const white_list = [
+        "+16462461260",
+        "+19178554229",
+        "+15676741096",
+        "+15033299390",
+        "+19177277893",
+        "+15516669363"
+    ]
+
+    if (!('to' in white_list)){
+            console.log("recipient_mobile not in whitelist");
+            return res.status(400).json({
+            message:"recipient_mobile not in whitelist"
+            success: false,
+        });
+    }
+
     client.messages 
           .create({ 
              body: body,

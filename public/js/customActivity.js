@@ -100,9 +100,8 @@ define([
             "authToken": authToken,
             "messagingService": messagingService,
             "body": body,
-            "hello":"world",
             "contact_key":"{{Contact.Key}}",
-            "test_event_key":"{{Event.APIEvent-47d939ea-ab6e-910c-45f2-bca3af5789c2.recipient_mobile}}"
+            "recipient_mobile":"{{Event.APIEvent-47d939ea-ab6e-910c-45f2-bca3af5789c2.recipient_mobile}}"
         }];
         //"to": "{{Contact.Email}}"
         payload['metaData'].isConfigured = true;
