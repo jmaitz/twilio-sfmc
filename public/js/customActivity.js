@@ -101,6 +101,7 @@ define([
             "authToken": authToken,
             "messagingService": messagingService,
             "body": body,
+            "eventDefinitionKey":eventDefinitionKey,
             "contact_key":"{{Contact.Key}}",
             "recipient_mobile":"{{Event." + eventDefinitionKey + ".BookingUserMobile}}"
         }];
