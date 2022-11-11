@@ -101,7 +101,7 @@ define([
             "messagingService": messagingService,
             "body": body,
             "contact_key":"{{Contact.Key}}",
-            "recipient_mobile":"{{Event.APIEvent-47d939ea-ab6e-910c-45f2-bca3af5789c2.RecipientMobile}}"
+            "recipient_mobile":"{{Event.APIEvent-47d939ea-ab6e-910c-45f2-bca3af5789c2.BookingUserMobile}}"
         }];
         //"to": "{{Contact.Email}}"
         payload['metaData'].isConfigured = true;
