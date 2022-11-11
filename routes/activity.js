@@ -98,16 +98,6 @@ exports.execute = function (req, res) {
 
     const client = require('twilio')(accountSid, authToken); 
 
-    const white_list = [
-        "+16462461260",
-        "+19178554229",
-        "+15676741096",
-        "+15033299390",
-        "+19177277893",
-        "+15516669363",
-        "+15033299390"
-    ]
-
     console.log("will send text to ", to);
 
     client.messages 
