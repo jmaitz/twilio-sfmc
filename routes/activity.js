@@ -9,114 +9,173 @@ var http = require('https');
 exports.logExecuteData = [];
 
 function logData(req) {
-    exports.logExecuteData.push({
-        body: req.body,
-        headers: req.headers,
-        trailers: req.trailers,
-        method: req.method,
-        url: req.url,
-        params: req.params,
-        query: req.query,
-        route: req.route,
-        cookies: req.cookies,
-        ip: req.ip,
-        path: req.path, 
-        host: req.host,
-        fresh: req.fresh,
-        stale: req.stale,
-        protocol: req.protocol,
-        secure: req.secure,
-        originalUrl: req.originalUrl
-    });
-    console.log("body: " + util.inspect(req.body));
-    console.log("headers: " + req.headers);
-    console.log("trailers: " + req.trailers);
-    console.log("method: " + req.method);
-    console.log("url: " + req.url);
-    console.log("params: " + util.inspect(req.params));
-    console.log("query: " + util.inspect(req.query));
-    console.log("route: " + req.route);
-    console.log("cookies: " + req.cookies);
-    console.log("ip: " + req.ip);
-    console.log("path: " + req.path);
-    console.log("host: " + req.host);
-    console.log("fresh: " + req.fresh);
-    console.log("stale: " + req.stale);
-    console.log("protocol: " + req.protocol);
-    console.log("secure: " + req.secure);
-    console.log("originalUrl: " + req.originalUrl);
+    try {
+        exports.logExecuteData.push({
+            body: req.body,
+            headers: req.headers,
+            trailers: req.trailers,
+            method: req.method,
+            url: req.url,
+            params: req.params,
+            query: req.query,
+            route: req.route,
+            cookies: req.cookies,
+            ip: req.ip,
+            path: req.path,
+            host: req.host,
+            fresh: req.fresh,
+            stale: req.stale,
+            protocol: req.protocol,
+            secure: req.secure,
+            originalUrl: req.originalUrl
+        });
+        console.log("body: " + util.inspect(req.body));
+        console.log("headers: " + req.headers);
+        console.log("trailers: " + req.trailers);
+        console.log("method: " + req.method);
+        console.log("url: " + req.url);
+        console.log("params: " + util.inspect(req.params));
+        console.log("query: " + util.inspect(req.query));
+        console.log("route: " + req.route);
+        console.log("cookies: " + req.cookies);
+        console.log("ip: " + req.ip);
+        console.log("path: " + req.path);
+        console.log("host: " + req.host);
+        console.log("fresh: " + req.fresh);
+        console.log("stale: " + req.stale);
+        console.log("protocol: " + req.protocol);
+        console.log("secure: " + req.secure);
+        console.log("originalUrl: " + req.originalUrl);
+    }
+    catch (e) {
+        console.log("error in logData");
+    }
 }
 
 /*
  * POST Handler for / route of Activity (this is the edit route).
  */
 exports.edit = function (req, res) {
+    try {
+        console.log("begin edit");
 
-    console.log("begin edit");
+        //console.log("Edited: "+req.body.inArguments[0]);    
 
-    //console.log("Edited: "+req.body.inArguments[0]);    
-    
-    // Data from the req and put it in an array accessible to the main app.
-    //console.log( req.body );
-    logData(req);
-    return res.status(200).json({
-        success: true,
-    });
+        // Data from the req and put it in an array accessible to the main app.
+        //console.log( req.body );
+        logData(req);
+        return res.status(200).json({
+            success: true,
+        });
+    }
+    catch (e) {
+        console.log("error in edit");
+        console.log(e)
+        return res.status(500).json({
+            message: "Error in edit",
+            success: false,
+        });
+    }
 };
 
 /*
  * POST Handler for /save/ route of Activity.
  */
 exports.save = function (req, res) {
-    
-    console.log("begin save");
+    try {
+        console.log("begin save");
 
-    //console.log("Saved: "+req.body.inArguments[0]);
-    
-    // Data from the req and put it in an array accessible to the main app.
-    console.log( req.body );
-    logData(req);
-    return res.status(200).json({
-        success: true,
-    });
+        //console.log("Saved: "+req.body.inArguments[0]);
+
+        // Data from the req and put it in an array accessible to the main app.
+        console.log(req.body);
+        logData(req);
+        return res.status(200).json({
+            success: true,
+        });
+    }
+    catch (e) {
+        console.log("error in save");
+        console.log(e)
+        return res.status(500).json({
+            message: "Error in save",
+            success: false,
+        });
+    }
 };
 
+
+function in_whitelist(to_number) {
+    const white_list = [
+        "+16462461260",
+        "+19178554229",
+        "+15676741096",
+        "+15033299390",
+        "+19177277893",
+        "+15516669363",
+        "+15033299390"
+    ]
+
+    return (to_number in white_list)
+}
 /*
  * POST Handler for /execute/ route of Activity.
  */
 exports.execute = function (req, res) {
-    console.log("begin execute");
-    console.log("inArguments");
-    console.log(req.body.inArguments);
-    var requestBody = req.body.inArguments[0];
-
-    const accountSid = requestBody.accountSid;
-    const authToken = requestBody.authToken;
-    const to = requestBody.recipient_mobile;
-    const messagingService = requestBody.messagingService;
-    const body = requestBody.body;
-
-    const client = require('twilio')(accountSid, authToken); 
-
-    console.log("will send text to ", to);
-
-    client.messages 
-          .create({ 
-             body: body,
-             messagingService: messagingService,
-             to: to,
-             from: '+19145951437'
-           }) 
-          .then(message => console.log(message.sid)) 
-          .done();
+    try {
 
 
+        console.log("begin execute");
+        console.log("inArguments");
+        console.log(req.body.inArguments);
+        var requestBody = req.body.inArguments[0];
 
-    // FOR TESTING
-    logData(req);
-    return res.status(200).json({
-        success: true,
-    });
+        const accountSid = requestBody.accountSid;
+        const authToken = requestBody.authToken;
+        const to = requestBody.recipient_mobile;
+        const messagingService = requestBody.messagingService;
+        const body = requestBody.body;
+
+        const client = require('twilio')(accountSid, authToken);
+
+        console.log("will send text to ", to);
+
+        if (in_whitelist(to)) {
+            console.log("about to send");
+            client.messages
+                .create({
+                    body: body,
+                    messagingService: messagingService,
+                    to: to,
+                    from: '+19145951437'
+                })
+                .then(message => console.log(message.sid))
+                .done();
+            console.log("created the message");
+        }
+        else {
+            console.log(to, "not in whitelist");
+            return res.status(500).json({
+                message: "recipient_mobile not in whitelist",
+                success: false,
+            });
+        }
+
+        // FOR TESTING
+        logData(req);
+        return res.status(200).json({
+            success: true,
+        });
+    }
+    catch (e) {
+        console.log("caught an exception in execute")
+        console.log(e);
+        return res.status(500).json({
+            message: "Error attempting to execute",
+            success: false,
+        });
+    }
+
 
     // Used to decode JWT
     // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
@@ -128,10 +187,10 @@ exports.execute = function (req, res) {
     //     }
 
     //     if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
-            
+
     //         // decoded in arguments
     //         var decodedArgs = decoded.inArguments[0];
-            
+
     //         logData(req);
     //         res.send(200, 'Execute');
     //     } else {
@@ -146,27 +205,36 @@ exports.execute = function (req, res) {
  * POST Handler for /publish/ route of Activity.
  */
 exports.publish = function (req, res) {
+    try {
+        console.log("Begin publish");
 
-    console.log("Begin publish");
+        //console.log("Published: "+req.body.inArguments[0]);        
 
-    //console.log("Published: "+req.body.inArguments[0]);        
-    
-    // Data from the req and put it in an array accessible to the main app.
-    //console.log( req.body );
-     logData(req);
-    return res.status(200).json({
-        success: true,
-    });
+        // Data from the req and put it in an array accessible to the main app.
+        //console.log( req.body );
+        logData(req);
+        return res.status(200).json({
+            success: true,
+        });
+    }
+    catch (e) {
+        console.log("error in publish");
+        console.log(e);
+        return res.status(500).json({
+            success: false,
+            message: "error in publish"
+        });
+    }
 };
 
 /*
  * POST Handler for /validate/ route of Activity.
  */
 exports.validate = function (req, res) {
-
+    try {
     console.log("Begin validate");
 
-    console.log("Validation request body:" );
+    console.log("Validation request body:");
     console.log(req.body)
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
@@ -174,5 +242,15 @@ exports.validate = function (req, res) {
     return res.status(200).json({
         success: true,
     });
-    // res.send(200, {"success": "true"});
+    
+    }
+    catch (e) {
+        console.log("error in publish");
+        console.log(e);
+        return res.status(500).json({
+            success: false,
+            message: "error in publish"
+        });
+    }
+
 };
