@@ -116,7 +116,7 @@ function in_whitelist(to_number) {
         "+15033299390"
     ]
 
-    return (to_number in white_list)
+    return white_list.includes(to_number)
 }
 /*
  * POST Handler for /execute/ route of Activity.
@@ -138,10 +138,8 @@ exports.execute = function (req, res) {
 
         const client = require('twilio')(accountSid, authToken);
 
-        console.log("will send text to ", to);
-
         if (in_whitelist(to)) {
-            console.log("about to send");
+            console.log(to, " is in whitelist, about to send");
             client.messages
                 .create({
                     body: body,
