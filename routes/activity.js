@@ -145,7 +145,7 @@ exports.execute = function (req, res) {
                     body: body,
                     messagingService: messagingService,
                     to: to,
-                    from: '+19145951437'
+                    from: '469335'
                 })
                 .then(message => console.log(message.sid))
                 .done();
