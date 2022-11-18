@@ -66,6 +66,9 @@ define([
                     $('#messageBody').val(val);
                 }                                                               
 
+                if (key === 'eventDefinitionKey') {
+                    $('#eventDefinitionKey').val(val);
+                }
             })
         });
 
