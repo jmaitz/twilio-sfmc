@@ -138,6 +138,11 @@ exports.execute = function (req, res) {
 
         const client = require('twilio')(accountSid, authToken);
 
+        console.log("are environment variables set?")
+        console.log(process.env.accountSid);
+        console.log(process.env.authToken);
+        console.log(process.env.jwtSecret);
+        console.log(process.env.messagingService);
         if (in_whitelist(to)) {
             console.log(to, " is in whitelist, about to send");
             client.messages
