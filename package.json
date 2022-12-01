@@ -1,5 +1,5 @@
 {
-  "name": "twilio-journey-builder-example", 
+  "name": "twilio-journey-builder-example",
   "version": "1.0.0",
   "description": "Journey Builder Activity Template",
   "engines": {
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/jmaitz/twilio-sfmc#readme",
   "dependencies": {
+    "axios": "^1.2.0",
     "body-parser": "^1.18.2",
     "bower": "^1.8.0",
     "errorhandler": "^1.5.0",
@@ -37,4 +38,4 @@
     "twilio": "^3.36.0",
     "uglify-js": "^3.6.4"
   }
-} 
+}

@@ -50,18 +50,6 @@ define([
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
 
-                if (key === 'accountSid') {
-                    $('#accountSID').val(val);
-                }
-
-                if (key === 'authToken') {
-                    $('#authToken').val(val);
-                }
-
-                if (key === 'messagingService') {
-                    $('#messagingService').val(val);
-                }
-
                 if (key === 'body') {
                     $('#messageBody').val(val);
                 }                                                               
