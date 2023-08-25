@@ -45,6 +45,7 @@ function logData(req) {
     console.log("protocol: " + req.protocol);
     console.log("secure: " + req.secure);
     console.log("originalUrl: " + req.originalUrl);
+    console.log("DEID:" +req.eventDefinitionKey);
 }
 
 /*
