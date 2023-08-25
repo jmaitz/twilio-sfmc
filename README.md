@@ -50,15 +50,15 @@ While you can certainly tweak this example to send directly from a short code, y
 #### Configure the Twilio SMS Activity
 
 1. Open /public/config.json and:
-2. Replace applicationExtensionKey for the value you got from step 8 in configuring your package in Marketing Cloud
+2. Replace applicationExtensionKey for the Unique Key value you got from step 8 in configuring your package in Marketing Cloud. Line 33
 3. Replace [your-app-URL] with the domain for your specific heroku app:
 - https://YOUR-APP-URL.herokuapp.com/journeybuilder/execute 
-- https://YOUR-APP-URL.herokuapp.com/publish
-- https://YOUR-APP-URL.herokuapp.com/validate 
-- https://YOUR-APP-URL.herokuapp.com/stop 
-- https://YOUR-APP-URL.herokuapp.com/save
+- https://YOUR-APP-URL.herokuapp.com/journeybuilder/publish
+- https://YOUR-APP-URL.herokuapp.com/journeybuilder/validate 
+- https://YOUR-APP-URL.herokuapp.com/journeybuilder/stop 
+- https://YOUR-APP-URL.herokuapp.com/journeybuilder/save
 4. Open public/js/customActivity.js and
-5. Replace {{Contact.Attribute.TwilioV1.TwilioNumber}} with the correct data extension and column name that will be used to reference the TO phone number.
+5. Replace {{Contact.Attribute.[Data Extension Name].[ColumnName]}} with the correct data extension and column name that will be used to reference the TO phone number.
 - {{Contact.Attribute.YOUR-DATA-EXTENSION-NAME.YOUR-PHONE-NUMBER-COLUMN}}
 - This is something that is typically customized when setting up Marketing Cloud but is needed in order for Twilio to understand WHO the message needs to be sent to.
 
@@ -82,7 +82,8 @@ If you want, the Account SID, auth token even the Messaging Service SID can be h
 #### Testing Twilio SMS Activity
 
 1. Login into Marketing Cloud and navigate to Journey Builder and create a new Journey.
-2. You should be able to the Twilio SMS custom activity and drag it into the canvas
+2. Create an attribute group to connect your Data Exention to the contact model. You can chnange the code to find the DataExtensionKey dynamically so that this doesn't have to be done. 
+2. You should be able to see the Twilio SMS custom activity and drag it into the canvas
 3. Click into the activity and fill out the Account SID, Auth Token, Messaging Service SID and the body for your SMS/MMS message.
 4. Better yet, test out 5 different variations of your SMS message to optimize campaign performance(optional):
 
